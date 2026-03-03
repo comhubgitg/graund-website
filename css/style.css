@@ -515,7 +515,7 @@ button {
 
 .problem__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   gap: 28px;
   text-align: left;
 }
@@ -582,7 +582,7 @@ button {
 
 .features__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 24px;
   text-align: left;
   margin-bottom: 56px;
@@ -813,7 +813,7 @@ button {
 
 .pricing__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 28px;
   max-width: 720px;
   margin: 0 auto 48px;
@@ -921,7 +921,7 @@ button {
 
 .articles__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   gap: 28px;
   text-align: left;
 }
@@ -1091,6 +1091,37 @@ button {
   }
 }
 
+@media (max-width: 600px) {
+  .stats {
+    gap: 32px;
+  }
+
+  .pushinka__inner {
+    gap: 32px;
+  }
+
+  .article-content {
+    padding: 28px 20px;
+  }
+
+  .cookie-consent__inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 14px;
+    padding: 20px;
+  }
+
+  .cookie-consent__buttons {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cookie-consent__btn {
+    flex: 1;
+    padding: 14px 20px;
+  }
+}
+
 @media (max-width: 480px) {
   .hero {
     padding: 100px 16px 140px;
@@ -1107,7 +1138,7 @@ button {
   }
 
   .stats {
-    gap: 36px;
+    gap: 24px;
   }
 
   .problem__grid,
@@ -1123,6 +1154,14 @@ button {
   .footer__emergency-numbers {
     flex-direction: column;
     gap: 12px;
+  }
+
+  .pushinka__inner {
+    gap: 24px;
+  }
+
+  .article-content {
+    padding: 24px 16px;
   }
 }
 
@@ -1364,20 +1403,4 @@ button {
   color: var(--dark-text);
 }
 
-@media (max-width: 480px) {
-  .cookie-consent__inner {
-    flex-direction: column;
-    text-align: center;
-    gap: 14px;
-    padding: 20px;
-  }
-
-  .cookie-consent__buttons {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .cookie-consent__btn {
-    flex: 1;
-  }
-}
+/* Cookie consent responsive handled in main 600px breakpoint */
