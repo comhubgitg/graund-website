@@ -1403,4 +1403,49 @@ button {
   color: var(--dark-text);
 }
 
+/* ── Tables ── */
+.article-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.article-content th,
+.article-content td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(74, 158, 175, 0.15);
+}
+
+.article-content th {
+  font-weight: 700;
+  color: var(--text);
+  background: rgba(74, 158, 175, 0.06);
+}
+
+.article-content td {
+  color: var(--text-secondary);
+}
+
+.article-content tr:hover td {
+  background: rgba(74, 158, 175, 0.03);
+}
+
+@media (max-width: 600px) {
+  .article-content table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .article-content th,
+  .article-content td {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+}
+
 /* Cookie consent responsive handled in main 600px breakpoint */
