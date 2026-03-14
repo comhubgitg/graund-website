@@ -841,7 +841,7 @@ button {
 }
 
 .pricing-card--lifetime {
-  border-color: #3A8A9A;
+  border-color: var(--dark-accent);
 }
 
 .pricing-card__badge {
@@ -1425,12 +1425,12 @@ button {
 
 .article-content th {
   font-weight: 700;
-  color: var(--text);
+  color: var(--light-text);
   background: rgba(74, 158, 175, 0.06);
 }
 
 .article-content td {
-  color: var(--text-secondary);
+  color: var(--light-text-secondary);
 }
 
 .article-content tr:hover td {
