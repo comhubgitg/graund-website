@@ -813,9 +813,9 @@ button {
 
 .pricing__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   gap: 28px;
-  max-width: 720px;
+  max-width: 1080px;
   margin: 0 auto 48px;
   text-align: left;
 }
@@ -838,6 +838,10 @@ button {
 
 .pricing-card--premium {
   border-color: var(--dark-accent);
+}
+
+.pricing-card--lifetime {
+  border-color: #3A8A9A;
 }
 
 .pricing-card__badge {
