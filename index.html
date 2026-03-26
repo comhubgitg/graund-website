@@ -405,6 +405,12 @@
     <div class="container">
       <h2 class="section-title fade-in">Бесплатно — уже помогает.<br>Premium — раскрывает всё</h2>
 
+      <!-- Pricing period toggle -->
+      <div class="pricing__toggle fade-in">
+        <button class="pricing__toggle-btn" data-period="month">1 месяц</button>
+        <button class="pricing__toggle-btn pricing__toggle-btn--active" data-period="quarter">4 месяца <span class="pricing__toggle-save">−37%</span></button>
+      </div>
+
       <div class="pricing__grid stagger-container">
         <!-- Free -->
         <div class="pricing-card fade-in">
@@ -448,31 +454,13 @@
           </ul>
         </div>
 
-        <!-- Premium месяц -->
-        <div class="pricing-card pricing-card--monthly fade-in">
-          <div class="pricing-card__header">
-            <div class="pricing-card__name">Premium</div>
-            <div class="pricing-card__price">399 &#8381; <span>/ мес</span></div>
-          </div>
-          <ul class="pricing-card__features">
-            <li>
-              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              Все функции Premium
-            </li>
-            <li>
-              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              Без долгосрочных обязательств
-            </li>
-          </ul>
-        </div>
-
-        <!-- Premium 4 месяца -->
+        <!-- Premium (toggle switches month/quarter) -->
         <div class="pricing-card pricing-card--premium fade-in">
           <div class="pricing-card__badge">Популярное</div>
           <div class="pricing-card__header">
             <div class="pricing-card__name">Premium</div>
-            <div class="pricing-card__price">999 &#8381; <span>/ 4 мес</span></div>
-            <div class="pricing-card__alt-price">249,75 &#8381;/мес</div>
+            <div class="pricing-card__price" id="premium-price">999 &#8381; <span>/ 4 мес</span></div>
+            <div class="pricing-card__alt-price" id="premium-alt">249,75 &#8381;/мес</div>
           </div>
           <ul class="pricing-card__features">
             <li>

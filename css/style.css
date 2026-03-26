@@ -835,6 +835,52 @@ button {
   text-align: center;
 }
 
+/* Pricing period toggle */
+.pricing__toggle {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin: 0 auto 2.5rem;
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: var(--radius-lg);
+  padding: 4px;
+  width: fit-content;
+}
+
+.pricing__toggle-btn {
+  padding: 10px 28px;
+  border: none;
+  background: transparent;
+  border-radius: calc(var(--radius-lg) - 2px);
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: all var(--transition-normal);
+}
+
+.pricing__toggle-btn:hover {
+  color: var(--text-primary);
+}
+
+.pricing__toggle-btn--active {
+  background: var(--dark-accent);
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(74, 158, 175, 0.35);
+}
+
+.pricing__toggle-save {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #2ecc71;
+  margin-left: 6px;
+}
+
+.pricing__toggle-btn--active .pricing__toggle-save {
+  color: #a8f0c8;
+}
+
 .pricing__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
@@ -862,11 +908,6 @@ button {
 
 .pricing-card--premium {
   border-color: var(--dark-accent);
-}
-
-.pricing-card--monthly {
-  border-color: var(--dark-accent);
-  opacity: 0.85;
 }
 
 .pricing-card--lifetime {

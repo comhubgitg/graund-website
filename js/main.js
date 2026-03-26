@@ -184,6 +184,33 @@ document.addEventListener('DOMContentLoaded', () => {
   /* -----------------------------------------
      7. Smooth scroll for anchor links
      ----------------------------------------- */
+  /* -----------------------------------------
+     8. Pricing period toggle
+     ----------------------------------------- */
+  const toggleBtns = document.querySelectorAll('.pricing__toggle-btn');
+  const premiumPrice = document.getElementById('premium-price');
+  const premiumAlt = document.getElementById('premium-alt');
+
+  if (toggleBtns.length && premiumPrice) {
+    toggleBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        toggleBtns.forEach(b => b.classList.remove('pricing__toggle-btn--active'));
+        btn.classList.add('pricing__toggle-btn--active');
+
+        if (btn.dataset.period === 'month') {
+          premiumPrice.innerHTML = '399 \u20BD <span>/ \u043C\u0435\u0441</span>';
+          premiumAlt.textContent = '';
+        } else {
+          premiumPrice.innerHTML = '999 \u20BD <span>/ 4 \u043C\u0435\u0441</span>';
+          premiumAlt.textContent = '249,75 \u20BD/\u043C\u0435\u0441';
+        }
+      });
+    });
+  }
+
+  /* -----------------------------------------
+     9. Smooth scroll for anchor links
+     ----------------------------------------- */
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', (e) => {
       const targetId = anchor.getAttribute('href');
