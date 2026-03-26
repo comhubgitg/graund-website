@@ -835,46 +835,50 @@ button {
   text-align: center;
 }
 
-/* Pricing period toggle */
+/* Pricing period toggle — pill on top of Premium card */
 .pricing__toggle {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  justify-content: center;
-  gap: 0;
-  margin: 0 auto 2.5rem;
-  background: rgba(0, 0, 0, 0.06);
-  border-radius: var(--radius-lg);
+  background: var(--dark-bg);
+  border-radius: 100px;
   padding: 4px;
-  width: fit-content;
+  z-index: 2;
+  white-space: nowrap;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
 }
 
 .pricing__toggle-btn {
-  padding: 10px 28px;
+  padding: 8px 20px;
   border: none;
   background: transparent;
-  border-radius: calc(var(--radius-lg) - 2px);
+  border-radius: 100px;
   cursor: pointer;
   font-family: var(--font-family);
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  color: var(--text-secondary);
+  color: rgba(216, 232, 235, 0.55);
   transition: all var(--transition-normal);
+  white-space: nowrap;
 }
 
 .pricing__toggle-btn:hover {
-  color: var(--text-primary);
+  color: rgba(216, 232, 235, 0.8);
 }
 
 .pricing__toggle-btn--active {
   background: var(--dark-accent);
   color: #fff;
-  box-shadow: 0 2px 12px rgba(74, 158, 175, 0.35);
+  box-shadow: 0 2px 8px rgba(74, 158, 175, 0.4);
 }
 
 .pricing__toggle-save {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 700;
   color: #2ecc71;
-  margin-left: 6px;
+  margin-left: 4px;
 }
 
 .pricing__toggle-btn--active .pricing__toggle-save {
@@ -908,6 +912,7 @@ button {
 
 .pricing-card--premium {
   border-color: var(--dark-accent);
+  padding-top: 48px;
 }
 
 .pricing-card--lifetime {

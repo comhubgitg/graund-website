@@ -405,12 +405,6 @@
     <div class="container">
       <h2 class="section-title fade-in">Бесплатно — уже помогает.<br>Premium — раскрывает всё</h2>
 
-      <!-- Pricing period toggle -->
-      <div class="pricing__toggle fade-in">
-        <button class="pricing__toggle-btn" data-period="month">1 месяц</button>
-        <button class="pricing__toggle-btn pricing__toggle-btn--active" data-period="quarter">4 месяца <span class="pricing__toggle-save">−37%</span></button>
-      </div>
-
       <div class="pricing__grid stagger-container">
         <!-- Free -->
         <div class="pricing-card fade-in">
@@ -456,7 +450,10 @@
 
         <!-- Premium (toggle switches month/quarter) -->
         <div class="pricing-card pricing-card--premium fade-in">
-          <div class="pricing-card__badge">Популярное</div>
+          <div class="pricing__toggle">
+            <button class="pricing__toggle-btn" data-period="month">1 месяц</button>
+            <button class="pricing__toggle-btn pricing__toggle-btn--active" data-period="quarter">4 месяца <span class="pricing__toggle-save">−37%</span></button>
+          </div>
           <div class="pricing-card__header">
             <div class="pricing-card__name">Premium</div>
             <div class="pricing-card__price" id="premium-price">999 &#8381; <span>/ 4 мес</span></div>
