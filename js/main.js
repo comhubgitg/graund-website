@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const left = i * slotWidth + Math.random() * slotWidth;
         const duration = 8 + Math.random() * 16;
         const delay = Math.random() * 4;
-        const size = 2 + Math.random() * 4;
+        const size = 3 + Math.random() * 5;
         const opacity = 0.15 + Math.random() * 0.35;
 
         particle.style.left = `${left}%`;
