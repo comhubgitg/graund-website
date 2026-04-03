@@ -454,7 +454,6 @@ button {
 
 .particle {
   position: absolute;
-  bottom: 0;
   width: 4px;
   height: 4px;
   background: rgba(74, 158, 175, 0.3);
